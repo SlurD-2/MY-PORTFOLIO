@@ -1,38 +1,100 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #00ccc5;
+  --secondary-color: #181818;
+    --glass-bg: rgba(255, 255, 255, 0.05); /* Transparent white for glass */
+  --glass-border: rgba(255, 255, 255, 0.2); /* Soft white border */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  background: var(--secondary-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-bar {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 15px 120px 0px 120px ;
+}
+.nav-links{
+  display: flex;
+  gap: 20px;
+}
+.nav-link{
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  color: var(--primary-color);
+  padding-bottom: 4px;
+  display: inline-block;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.4s ease-in-out;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  font-style: italic;
+  color: var(--primary-color);
+}
+.contact-content{
+  color: var(--primary-color);
+}
+.home-content {
+  color: var(--primary-color);
+}
+.home-container {
+ margin: 0px 100px 0px 100px;
+}
+.intro-text{
+  position: absolute;
+  top: 30%;
+  left: 24%;
+  padding: 0;
+  margin: 0;
+}
+
+.name-text{
+  font-size: 90px;
+   text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.profile-content {
+  display: flex;
+  font-style: italic;
+    background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  height: 50vh;
+  z-index: 1;
   color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  justify-content: center;
+
+  color: var(--primary-color);
+}
+.skills-container{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+}
+.skill-box{
+
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

@@ -1,25 +1,44 @@
 :root {
-  --primary-color: #00ccc5;
+  --primary-color: #00d8e7;
   --secondary-color: #181818;
-    --glass-bg: rgba(255, 255, 255, 0.05); /* Transparent white for glass */
+  --glass-bg: rgba(255, 255, 255, 0.048); /* Transparent white for glass */
   --glass-border: rgba(255, 255, 255, 0.2); /* Soft white border */
+  --white-smoke: #fcfcfce8;
 }
-
 * {
   margin: 0;
   padding: 0;
-  background: var(--secondary-color);
+  list-style: none;
+  text-decoration: none;
 }
-
-.nav-bar {
+body{
+  background-color: var(--secondary-color);
+}
+.section {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+nav {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 120px 0px 120px ;
 }
-.nav-links{
+ul {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 10px 100px 0px ;
   gap: 20px;
+}
+.logo {
+  padding-left: 100px;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 700;
 }
 .nav-link{
   font-size: 18px;
@@ -43,58 +62,29 @@
 .nav-link:hover::after {
   width: 100%;
 }
-.logo {
-  font-size: 25px;
-  font-weight: 800;
-  font-style: italic;
-  color: var(--primary-color);
-}
-.contact-content{
-  color: var(--primary-color);
-}
-.home-content {
-  color: var(--primary-color);
-}
 .home-container {
- margin: 0px 100px 0px 100px;
+  padding-top: 160px;
 }
-.intro-text{
-  position: absolute;
-  top: 30%;
-  left: 24%;
-  padding: 0;
-  margin: 0;
-}
-
-.name-text{
-  font-size: 90px;
-   text-align: center;
-  padding: 0;
-  margin: 0;
-}
-
-.profile-content {
-  display: flex;
-  font-style: italic;
-    background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  height: 50vh;
-  z-index: 1;
-  color: white;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
-  flex-direction: column;
-  justify-content: center;
-
+.intro-text {
+  font-size: 24px;
   color: var(--primary-color);
 }
-.skills-container{
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-
+.name { 
+  font-size: 90px;
+  color: var(--primary-color);
 }
-.skill-box{
-
+.skill-buttons{
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+.skill-btn {
+  padding: 7px;
+  border-radius: 5px;
+  border: none;
+  border-top: 2px solid var(--primary-color);
+  background-color: transparent;
+  font-size: 17px;
+  color: var(--primary-color);
 }
 

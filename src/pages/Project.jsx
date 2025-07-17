@@ -1,6 +1,6 @@
 function Project(){
     return (
-        <div>
+        <div className="page-container"> 
             
         </div>
     )

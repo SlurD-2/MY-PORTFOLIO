@@ -1,0 +1,13 @@
+If you're in a new branch and want to update GitHub Pages:
+
+bash
+Copy
+Edit
+git checkout new-branch
+git add .
+git commit -m "Updated design"
+git push origin new-branch
+npm run deploy
+
+To create new branch
+git checkout -b new-branch-name

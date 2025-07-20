@@ -1,7 +1,11 @@
 :root {
-  --primary-color: #00d8e7;
-  --secondary-color: #181818;
-  --glass-bg: rgba(255, 255, 255, 0.048); /* Transparent white for glass */
+  --primary-color: #20cdda;
+  --light-color: #26d2df;
+  --low-color: #107a81;
+  --low-text-color: #2ca5ad;
+  --secondary-color: #0A0E15;
+  --text-color: #e0fafa;
+  --glass-bg: #202531; /* Transparent white for glass */
   --glass-border: rgba(255, 255, 255, 0.2); /* Soft white border */
   --white-smoke: #fcfcfce8;
 }
@@ -14,14 +18,10 @@
 body{
   background-color: var(--secondary-color);
 }
-.section {
-  display: flex;
-  justify-content: center;
-  height: 100vh;
-}
+
 nav {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,16 +36,16 @@ ul {
 }
 .logo {
   padding-left: 100px;
-  color: var(--primary-color);
+  color: var(--light-color);
   font-size: 18px;
   font-weight: 700;
 }
 .nav-link{
-  font-size: 18px;
+  font-size: 19px;
   text-decoration: none;
   cursor: pointer;
   position: relative;
-  color: var(--primary-color);
+  color: var(--low-text-color);
   padding-bottom: 4px;
   display: inline-block;
 }
@@ -62,29 +62,109 @@ ul {
 .nav-link:hover::after {
   width: 100%;
 }
-.home-container {
+.nav-link:hover {
+  color: var(--light-color);
+}
+.home-container{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.home-content {
   padding-top: 160px;
 }
 .intro-text {
   font-size: 24px;
-  color: var(--primary-color);
+  color: var(--white-smoke);
 }
 .name { 
   font-size: 90px;
-  color: var(--primary-color);
+  font-weight: 700;
+  color: var(--low-color);
+  padding: 0px;
+  text-shadow: 2px 2px;
+
 }
-.skill-buttons{
+.skill-scroll-wrapper {
+  width: 100%;                /* Set fixed or full width */
+  overflow: hidden;           /* Hide overflow for animation */
+  position: relative;
+}
+.skill-buttons {
   display: flex;
-  justify-content: end;
   gap: 10px;
+  animation: scrollLeft 20s linear infinite;
+  white-space: nowrap;
 }
 .skill-btn {
-  padding: 7px;
-  border-radius: 5px;
+  padding: 5px 15px;
   border: none;
-  border-top: 2px solid var(--primary-color);
+  border-left: 2px solid var(--text-color);
+  line-height: 15px;
   background-color: transparent;
   font-size: 17px;
-  color: var(--primary-color);
+  color: var(--low-color);
+  flex: 0 0 auto;
 }
 
+/* 👇 Animation that loops the scrolling */
+/* @keyframes scrollLeft {
+  0% {
+    transform: translateX(0%);
+  }
+
+    60% {
+    transform: translateX(-50%); 
+  }
+} */
+
+.about-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.about-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.myImage {
+  height: 200px;
+  width: 180px;
+  border: 2px solid var(--primary-color);
+  object-fit: cover;
+}
+.desc {
+  color: var(--text-color);
+  text-align: justify;
+  max-width: 300px; /* Adjust width to control line length */
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 0;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.divider{
+  border: 1px solid var(--primary-color);
+  margin-top: 3px;
+}
+.bold-name{
+  font-weight: bold;
+  color: var(--light-color);
+}
+.projects-container{
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+.project-content{
+  
+}
+.project-1 {
+  height: 300px;
+  object-fit: cover;
+}
+.project-label{
+  color: var(--text-color);
+}

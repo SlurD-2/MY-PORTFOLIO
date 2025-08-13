@@ -2,7 +2,7 @@
   "name": "myproject",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://SLUR-01.github.io/MY-PORTFOLIO",
+  "homepage": "https://SLUR-01.github.io/PORTFOLIO",
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "^6.6.3",
